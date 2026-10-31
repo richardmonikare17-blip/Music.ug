@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Discover artists, listen to new music, share posters and connect with the music community.">
+  <title>BeatBridge | Music Promotion Hub</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#home" aria-label="BeatBridge home"><span class="brand-mark">♫</span><span>BEAT<span class="accent">BRIDGE</span><small>MUSIC PROMOTION HUB</small></span></a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Open navigation">☰</button>
+    <nav id="mainNav">
+      <a href="#home">Home</a><a href="#artists">Artists</a><a href="#music">Music</a>
+      <a href="#post">Post & Promote</a><a href="#community">Community</a>
+    </nav>
+    <a class="button button-small" href="#post">Promote a song +</a>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <p class="eyebrow">YOUR SOUND. YOUR PEOPLE. YOUR MOMENT.</p>
+        <h1>Make your music<br><span class="gradient-text">travel further.</span></h1>
+        <p class="hero-copy">Discover fresh artists, share new releases, promote event posters and connect with music lovers in one place.</p>
+        <div class="hero-actions"><a class="button" href="#music">Explore music <span>↗</span></a><a class="button button-outline" href="#post">Submit your release</a></div>
+        <div class="hero-stats"><div><strong>01</strong><span>Discover artists</span></div><div><strong>02</strong><span>Share new releases</span></div><div><strong>03</strong><span>Build your audience</span></div></div>
+      </div>
+      <div class="hero-art" aria-label="Music promotion artwork">
+        <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+        <div class="record"><div class="record-label">BB<br><span>♫</span></div></div>
+        <div class="floating-card card-top"><span class="live-dot"></span> NEW MUSIC EVERY WEEK</div>
+        <div class="floating-card card-bottom"><span class="mini-icon">♫</span><div><b>Turn it up</b><small>Let the world hear you</small></div></div>
+      </div>
+    </section>
+
+    <section class="section featured" id="artists">
+      <div class="section-heading"><div><p class="eyebrow">MEET THE TALENT</p><h2>Artists to <span class="accent">watch</span></h2></div><p>Use this space to introduce your favourite upcoming and established artists.</p></div>
+      <div class="artist-grid">
+        <article class="artist-card"><div class="artist-avatar avatar-one">♫</div><div><span class="tag">AFROBEAT</span><h3>Artist Name One</h3><p>Fresh sounds · New release coming</p><a href="#community" class="text-link">Connect with artist ↗</a></div></article>
+        <article class="artist-card"><div class="artist-avatar avatar-two">♪</div><div><span class="tag">HIP-HOP</span><h3>Artist Name Two</h3><p>Bars, rhythm and real stories</p><a href="#community" class="text-link">Connect with artist ↗</a></div></article>
+        <article class="artist-card"><div class="artist-avatar avatar-three">♫</div><div><span class="tag">GOSPEL / SOUL</span><h3>Artist Name Three</h3><p>Music with a message</p><a href="#community" class="text-link">Connect with artist ↗</a></div></article>
+      </div>
+      <p class="hint">These are sample artist profiles. Replace the names and descriptions with real artists.</p>
+    </section>
+
+    <section class="section music-section" id="music">
+      <div class="section-heading"><div><p class="eyebrow">FRESH FROM THE SCENE</p><h2>Latest <span class="accent">music</span></h2></div><p>Upload an audio file below to preview it on this device, or add a streaming link.</p></div>
+      <div class="music-layout">
+        <div class="music-list" id="musicList">
+          <div class="music-row sample-row"><div class="track-cover cover-a">♫</div><div class="track-info"><h3>Sample track title</h3><p>Artist name · Afrobeat</p></div><span class="track-label">SAMPLE</span></div>
+          <div class="music-row sample-row"><div class="track-cover cover-b">♪</div><div class="track-info"><h3>Another new sound</h3><p>Artist name · Hip-hop</p></div><span class="track-label">SAMPLE</span></div>
+        </div>
+        <aside class="music-callout"><div class="sound-wave">▂ ▅ ▃ ▇ ▄ ▆ ▂ ▅ ▇ ▃ ▄ ▆ ▂</div><h3>Got a new release?</h3><p>Share your track details and a streaming link with the community.</p><a class="button" href="#post">Submit a track +</a></aside>
+      </div>
+    </section>
+
+    <section class="section post-section" id="post">
+      <div class="section-heading"><div><p class="eyebrow">YOUR NEXT MOVE</p><h2>Post. Share. <span class="accent">Promote.</span></h2></div><p>Add a song, event poster or announcement to the demo feed below.</p></div>
+      <div class="post-layout">
+        <form id="postForm" class="post-form">
+          <label for="postType">What are you sharing?</label>
+          <select id="postType"><option value="Song">New song / release</option><option value="Poster">Poster / event flyer</option><option value="Update">Artist update / announcement</option></select>
+          <label for="artistName">Artist / promoter name</label><input id="artistName" required maxlength="80" placeholder="e.g. Ricky Music">
+          <label for="postTitle">Title</label><input id="postTitle" required maxlength="120" placeholder="Song title, event or update">
+          <label for="postDescription">Short description</label><textarea id="postDescription" rows="3" maxlength="500" placeholder="Tell people what is new..."></textarea>
+          <label for="postLink">Music or social link (optional)</label><input id="postLink" type="url" placeholder="https://...">
+          <label for="postFile">Attach audio or poster image (optional)</label><input id="postFile" type="file" accept="audio/*,image/*">
+          <p class="form-note">Demo note: posts are saved only in this browser. This does not publish them to the internet.</p>
+          <button class="button" type="submit">Publish to demo feed ↗</button>
+        </form>
+        <div class="feed-panel"><div class="feed-head"><div><p class="eyebrow">COMMUNITY FEED</p><h3>Recent posts</h3></div><button class="clear-button" id="clearPosts" type="button">Clear demo posts</button></div><div id="postFeed" class="post-feed"><div class="empty-state"><span>♫</span><h3>Your next post starts here</h3><p>Share a new release, poster or artist update using the form.</p></div></div></div>
+      </div>
+    </section>
+
+    <section class="section community-section" id="community">
+      <div class="community-copy"><p class="eyebrow">LET'S CONNECT</p><h2>Music grows<br>through <span class="accent">community.</span></h2><p>Chat with fans, contact artists and direct people to your official pages. Replace the sample links with your own accounts.</p></div>
+      <div class="connect-grid">
+        <a class="connect-card" href="https://wa.me/" target="_blank" rel="noopener"><span class="connect-icon">☏</span><div><b>WhatsApp chat</b><small>Start a conversation</small></div><span>↗</span></a>
+        <a class="connect-card" href="https://www.facebook.com/" target="_blank" rel="noopener"><span class="connect-icon">f</span><div><b>Facebook</b><small>Community and updates</small></div><span>↗</span></a>
+        <a class="connect-card" href="https://www.tiktok.com/" target="_blank" rel="noopener"><span class="connect-icon">♪</span><div><b>TikTok</b><small>Short clips and previews</small></div><span>↗</span></a>
+        <a class="connect-card" href="https://www.youtube.com/" target="_blank" rel="noopener"><span class="connect-icon">▶</span><div><b>YouTube</b><small>Videos and music releases</small></div><span>↗</span></a>
+        <a class="connect-card" href="https://soundcloud.com/" target="_blank" rel="noopener"><span class="connect-icon">☁</span><div><b>SoundCloud</b><small>Listen and share tracks</small></div><span>↗</span></a>
+        <a class="connect-card" href="mailto:yourmusic@email.com"><span class="connect-icon">✉</span><div><b>Email the team</b><small>Bookings and promotion</small></div><span>↗</span></a>
+      </div>
+      <p class="hint">WhatsApp opens the service, but you must add your own number to create a direct chat link. Never publish private contact details without permission.</p>
+    </section>
+
+    <section class="cta-band"><div><p class="eyebrow">READY TO BE HEARD?</p><h2>Put your next release in motion.</h2></div><a class="button button-light" href="#post">Start promoting ↗</a></section>
+  </main>
+
+  <footer><a class="brand footer-brand" href="#home"><span class="brand-mark">♫</span><span>BEAT<span class="accent">BRIDGE</span><small>MUSIC PROMOTION HUB</small></span></a><p>© <span id="year"></span> BeatBridge. Built for music discovery.</p><a href="#home" class="back-top">Back to top ↑</a></footer>
+  <script src="app.js"></script>
+</body>
+</html>
